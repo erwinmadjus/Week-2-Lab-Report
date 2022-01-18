@@ -13,5 +13,11 @@
 * Setting an SSH Key
 * Optimizing Remote Running
 
+## **Installing VSCode**
+## **Remotely Connecting**
+## **Trying Some Commands**
+## **Moving Files with 'scp'**
+## **Setting an SSH Key**
+## **Optimizing Remote Running**
 
-
+Having an effective workflow is essential to being productive when working in the industry. Some things that you can do to enhance your workflow would be to do the following 
