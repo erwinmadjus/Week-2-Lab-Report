@@ -65,7 +65,7 @@ Displays the following:
 
 ![Image](RunningLS-LAT.png)
 
- Hello
+ 
 
 * ls -a
 lists (public and hidden) files or directories; It’s the all command where it doesn’t ignore entries starting with . 
