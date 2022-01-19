@@ -54,19 +54,31 @@ Now that you have connected your client device to the server, I will now talk ab
 changes directory to home directory
 * cd 
 changes current directory
+
+![Image](RunningCDCommands.png) 
+
 * ls -lat
 Displays the following: 
 
+![Image](RunningLS-LAT.png) 
+
 * ls -a
 lists (public and hidden) files or directories; It’s the all command where it doesn’t ignore entries starting with . 
+
+![Image](RunningLS-A.png) 
+
 * ls <directory> where <directory> is /home/linux/ieng6/cs15lwi22/cs15lwi22abc, where 
 the abc is one of the other group members’ username
-Displays the following: 
 
 * cp /home/linux/ieng6/cs15lwi22/public/hello.txt ~/
 We want to copy hello.txt into our home directory but since the file might be in a higher directory that we don’t have access to, permission’s denied.
 * cat /home/linux/ieng6/cs15lwi22/public/hello.txt
-displays the following: 
+displays the following: we do not have access to this fie as well. 
+
+This screenshot displays the outputs for the last 3 commands listed above:
+
+![Image](RunningLastCommands.png) 
+
 
 * exit or Ctrl-D 
 disconnect from the server
@@ -96,9 +108,15 @@ scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/
 
 Login using your password and after, you should now be able to see it in your home directory.  
 
+![Image](MovingFilesWithSCP.png) 
+
+
 ## **Setting an SSH Key**
 
 To avoid having to always type your password, we can create an SSH Key. You will have to use the command ssh-keygen where it generates 2 files, a public key, which is stored on the server, and a private key, which is stored on the client. The ssh command can be used instead of always typing up your password.  
+
+![Image](SSH-Keygen.png) 
+
 
 ## **Optimizing Remote Running**
 
@@ -109,3 +127,6 @@ Having an effective workflow is essential to being productive when working in th
 3. Use semicolons to run multiple commands at one time. 
 4. Write a command in quotes after typing an SSH command to exit right after. 
 5. Use the up-arrow 
+
+
+![Image](Optimization.png) 
