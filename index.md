@@ -63,7 +63,9 @@ changes current directory
 * ls -lat
 Displays the following: 
 
-![Image](RunningLS-LAT.png) 
+![Image](RunningLS-LAT.png)
+
+ 
 
 * ls -a
 lists (public and hidden) files or directories; It’s the all command where it doesn’t ignore entries starting with . 
