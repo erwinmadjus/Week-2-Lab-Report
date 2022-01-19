@@ -46,6 +46,9 @@ After getting your account, open VSCode and then do the following:
 5. You should now be connected to the computer located at your school or at your place of work. 
 
 
+![Image](RemotelyConnecting.png) 
+
+
 ## **Trying Some Commands**
 
 Now that you have connected your client device to the server, I will now talk about different commands that you can use. 
