@@ -173,13 +173,31 @@ The key's randomart image is:
 
 ## **Optimizing Remote Running**
 
-Having an effective workflow is essential to being productive when working in the industry. Some things that you can do to enhance your workflow would be to do the following. 
+To Optimize Remote Running, in the case making a local edit on a java file on your computer, the client; and then copying it to the server and running it. 
 
-1. Create a .txt file that contains all of the commands that you know you will be using a lot. 
-2. Create an SSH Key so that you do not have to type your entire password everytime. 
-3. Use semicolons to run multiple commands at one time. 
-4. Write a command in quotes after typing an SSH command to exit right after. 
-5. Use the up-arrow 
+![Image](OptimizationTerminal.png) 
 
+Since you have already ```ssh``` into the server, you already have that command listed on your terminal that you can use. 
+
+Inside of the terminal, first use the up arrow key until you find the ```ssh``` command that you used before. In my case it took 2 keystrokes. 
+
+After that, I entered my passphrase which was 5 keystrokes. 
+
+Next I used the up arrow key again which took 1 keystroke. 
+
+Lastly I used the ```cp``` command that I have used earlier, which was used 2 keystrokes.
+
+
+After making a local edit on the client, and then copying it to the server and running it, it took 10 Keystrokes. 
+
+
+Having an effective workflow is essential to being productive when working in the industry. Some other things that you can do to enhance your workflow would be to do the following. 
+
+1. Create a .txt file that contains all of the commands that you know you will be using a lot. (Writing down your ```ssh``` command and then copying takes 2 keystrokes)
+
+2. Create an SSH Key so that you do not have to type your entire password everytime. (Creating an ```ssh``` key and writing it down on the terminal depends on how long you passphrase is)
+3. Use semicolons to run multiple commands at one time. (Lessens the amount of keystrokes you are using)
+4. Write a command in quotes after typing an SSH command to exit right after. (Lessens the amount of keystrokes you are using aswell)
+5. Use the up-arrow (Lessens the amount of keystrokes you are using aswell) 
 
 ![Image](Optimization.png) 
