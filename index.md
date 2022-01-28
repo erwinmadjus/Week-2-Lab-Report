@@ -134,7 +134,39 @@ You are now able to run the code on the ```ieng6``` device using the commands ``
 
 ## **Setting an SSH Key**
 
-To avoid having to always type your password everytime you login or use ```scp```, we can create an ```ssh``` Key. You will have to use the command ssh-keygen where it generates 2 files, a public key, which is stored on the server, and a private key, which is stored on the client. The ssh command can be used instead of always typing up your password.  
+* To avoid having to always type your password everytime you login or use ```scp```, we can create an ```ssh``` Key. 
+* You will have to use the command ```ssh-keygen``` where it generates 2 files, a public key, which is stored on the server, and a private key, which is stored on the client. 
+* The ```ssh``` command can be used instead of always typing up your password.  
+
+Run this on the terminal of you client computer: 
+
+
+```
+
+# on client (your computer)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/joe/.ssh/id_rsa.
+Your public key has been saved in /Users/joe/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 joe@Joes-Mac-mini.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|       . . + .   |
+|      . . B o .  |
+|     . . B * +.. |
+|      o S = *.B. |
+|       = = O.*.*+|
+|        + * *.BE+|
+|           +.+.o |
+|             ..  |
++----[SHA256]-----+
+
+```
 
 ![Image](SSH-Keygen.png) 
 
