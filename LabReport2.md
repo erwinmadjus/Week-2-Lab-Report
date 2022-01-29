@@ -18,6 +18,8 @@ Before I start talking about the code changes that were made, these problems wer
 ![Image](Problem1CodeDiff1.png) 
 ![Image](Problem1CodeDiff2.png) 
 
+[Link to Test-File2](https://github.com/erwinmadjus/markdown-parse/blob/main/test-file2.md)
+
 
 
 
