@@ -50,13 +50,13 @@ and led to the symptoms where the program could not read nor find the link that 
 
 **Problem #2-**
 
-* Screenshot of the Second Unexpected Error:
+* Screenshot of the First Code Change Diff from GitHub: 
 
-![Image]()  
+![Image](SecondCodeDiff.png)  
 
 * Link to the test file for a failure-inducing input that prompted you to make that change. (Second Unexpected Error)
 
-[Link to the Code Change Diff #2]()
+[Link to the Code Change Diff #2](https://github.com/erwinmadjus/markdown-parse/commit/e5ae6dc29aacad24d853d4a094952b1c3929f725)
 
 * The symptom of the **SECOND** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
 
@@ -64,25 +64,28 @@ and led to the symptoms where the program could not read nor find the link that 
 
 ```Hello```
 
-![Image]()  
+![Image](SecondExpectedOutcome.png)  
 
 
 **Problem #3-**
 
-* Screenshot of the Third Unexpected Error:
+* Screenshot of the Third Code Change Diff:
+
+![Image](ThirdCodeChangeDiff.png) 
 
 * Link to the test file for a failure-inducing input that prompted you to make that change. (Third Unexpected Error)
 
-[Link to the Code Change Diff #3]()
+[Link to the Code Change Diff #3](https://github.com/erwinmadjus/markdown-parse/commit/0918fa9aed27564a45e67b080e6f0c9aa2799f3f)
 
 * The symptom of the **THIRD** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
 
+![Image](ThirdUnexpectedOutcome.png) 
 
 * After making a change to the Markdown File, here is the Expected Outcome"
 
 ```Hello```
 
-![Image]()  
+![Image](ThirdExpectedOutcome.png)  
 
 
 
