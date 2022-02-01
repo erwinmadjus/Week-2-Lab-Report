@@ -11,7 +11,7 @@ The link to all of the commits that I have made can be found if you click on the
 
 [Link to MarkdownParse Repository Commits](https://github.com/erwinmadjus/markdown-parse/commits/main)
 
-**Problem #1 -** 
+## **Problem #1 -** 
 
 * Screenshot of the First Code Change Diff from GitHub: 
 
@@ -48,7 +48,7 @@ and led to the symptoms where the program could not read nor find the link that 
 ![Image](FirstExpectedOutcome.png) 
 
 
-**Problem #2-**
+## **Problem #2-**
 
 * Screenshot of the First Code Change Diff from GitHub: 
 
@@ -56,18 +56,38 @@ and led to the symptoms where the program could not read nor find the link that 
 
 * Link to the test file for a failure-inducing input that prompted you to make that change. (Second Unexpected Error)
 
-[Link to the Code Change Diff #2](https://github.com/erwinmadjus/markdown-parse/commit/e5ae6dc29aacad24d853d4a094952b1c3929f725)
+[Link to the Code Change Diff #2](https://github.com/erwinmadjus/markdown-parse/commit/2092412590b34f7bb0359098dc35f653d52e3569)
 
 * The symptom of the **SECOND** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
 
+
+```
+erwin@Erwins-MacBook-Air markdown-parse % java MarkdownParse test-file3.md
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.Arrays.copyOfRange(Arrays.java:4031)
+        at java.base/java.lang.StringLatin1.newString(StringLatin1.java:767)
+        at java.base/java.lang.String.substring(String.java:1914)
+        at MarkdownParse.getLinks(MarkdownParse.java:18)
+        at MarkdownParse.main(MarkdownParse.java:27)
+```
+
+![Image](SecondUnexpectedOutcome.png)
+
 * After making a change to the Markdown File, here is the Expected Outcome"
 
-```Hello```
+```
+[SecondError.com]
+```
 
 ![Image](SecondExpectedOutcome.png)  
 
 
-**Problem #3-**
+* Relationship: 
+
+The bug was that I included too many open and closed parenthesis (```(``` and ```)``` ) and this resulted in a failure-inducing input stating ```OutOfMemoryError: Java heap space```. This then led to symptoms where the program was unable to find a closed parenthesis where it should be, for example, there was an open parenthesis before there was an expected closed parenthesis. To "fix" this symptom, I had to remove the extra parenthesis that were placed around the link.  
+
+
+## **Problem #3-**
 
 * Screenshot of the Third Code Change Diff:
 
@@ -88,6 +108,6 @@ and led to the symptoms where the program could not read nor find the link that 
 ![Image](ThirdExpectedOutcome.png)  
 
 
-
+* Relationship:  
 
 
