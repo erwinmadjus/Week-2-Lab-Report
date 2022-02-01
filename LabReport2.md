@@ -43,7 +43,9 @@ and led to the symptoms where the program could not read nor find the link that 
 
 * After making a change to the Markdown File, here is the Expected Outcome"
 
-```[FirstError.com]```
+```
+[FirstError.com]
+```
 
 ![Image](FirstExpectedOutcome.png) 
 
@@ -76,7 +78,9 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 * After making a change to the Markdown File, here is the Expected Outcome"
 
 ```
+
 [SecondError.com]
+
 ```
 
 ![Image](SecondExpectedOutcome.png)  
