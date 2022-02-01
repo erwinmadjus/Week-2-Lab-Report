@@ -13,9 +13,9 @@ The link to all of the commits that I have made can be found if you click on the
 
 **Problem #1 -** 
 
-* Screenshot of the First Unexpected Error:
+* Screenshot of the First Code Change Diff from GitHub: 
 
-![Image]()  
+![Image](FirstCodeDiff.png) 
 
 * Link to the test file for a failure-inducing input that prompted you to make that change. (First Unexpected Error)
 
@@ -23,10 +23,30 @@ The link to all of the commits that I have made can be found if you click on the
 
 * The symptom of the **FIRST** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
 
+```
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -1, length 225
+        at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3720)
+        at java.base/java.lang.String.substring(String.java:1909)
+        at MarkdownParse.getLinks(MarkdownParse.java:18)
+        at MarkdownParse.main(MarkdownParse.java:27)
+```
+
+![Image](FirstUnexpectedOutcome.png) 
+
+* Relationship: 
+
+The bug was that instead of putting the link inside of ```()```, I put it inside of ```[]```, and this resulted in a failure-inducing input stating 
+
+```Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -1``` 
+
+and led to the symptoms where the program could not read nor find the link that was in the markdown file and could not find the open parenthesis nor the closed parenthesis. To allow the program to display the expected outcome, I had to use the correct code needed to display a link. 
 
 * After making a change to the Markdown File, here is the Expected Outcome"
 
-![Image]()  
+```[FirstError.com]```
+
+![Image](FirstExpectedOutcome.png) 
+
 
 **Problem #2-**
 
@@ -42,7 +62,10 @@ The link to all of the commits that I have made can be found if you click on the
 
 * After making a change to the Markdown File, here is the Expected Outcome"
 
+```Hello```
+
 ![Image]()  
+
 
 **Problem #3-**
 
@@ -56,6 +79,8 @@ The link to all of the commits that I have made can be found if you click on the
 
 
 * After making a change to the Markdown File, here is the Expected Outcome"
+
+```Hello```
 
 ![Image]()  
 
