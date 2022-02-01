@@ -7,32 +7,59 @@
 
 ## 3 Code Changes That Were Made During Labs 3 and 4: 
 
-Before I start talking about the code changes that were made, these problems were found when working with the code from the following repository:
+The link to all of the commits that I have made can be found if you click on the following link: 
 
-[Link to MarkdownParse Repository](https://github.com/erwinmadjus/markdown-parse)
+[Link to MarkdownParse Repository Commits](https://github.com/erwinmadjus/markdown-parse/commits/main)
 
 **Problem #1 -** 
 
-[Link to the Code Change Diff #1](https://github.com/erwinmadjus/markdown-parse/commit/7797b1e40dc25fbf8ec0a7e3ba720792f7461fd5)
+* Screenshot of the First Unexpected Error:
 
-![Image](Problem1CodeDiff1.png) 
-![Image](Problem1CodeDiff2.png) 
+![Image]()  
 
-[Link to Test-File2](https://github.com/erwinmadjus/markdown-parse/blob/main/test-file2.md)
+* Link to the test file for a failure-inducing input that prompted you to make that change. (First Unexpected Error)
+
+[Link to the Code Change Diff #1](https://github.com/erwinmadjus/markdown-parse/commit/a022a604fd60cb653d4e29fe471fb8e5a918d2d1)
+
+* The symptom of the **FIRST** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
 
 
+* After making a change to the Markdown File, here is the Expected Outcome"
 
+![Image]()  
 
 **Problem #2-**
 
+* Screenshot of the Second Unexpected Error:
+
+![Image]()  
+
+* Link to the test file for a failure-inducing input that prompted you to make that change. (Second Unexpected Error)
+
 [Link to the Code Change Diff #2]()
 
-![Image](Problem1CodeDiff.png) 
+* The symptom of the **SECOND** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
+
+* After making a change to the Markdown File, here is the Expected Outcome"
+
+![Image]()  
 
 **Problem #3-**
 
+* Screenshot of the Third Unexpected Error:
+
+* Link to the test file for a failure-inducing input that prompted you to make that change. (Third Unexpected Error)
+
 [Link to the Code Change Diff #3]()
 
-![Image](Problem1CodeDiff.png)  
+* The symptom of the **THIRD** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
+
+
+* After making a change to the Markdown File, here is the Expected Outcome"
+
+![Image]()  
+
+
+
 
 
