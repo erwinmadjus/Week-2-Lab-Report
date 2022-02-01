@@ -99,15 +99,25 @@ The bug was that I included too many open and closed parenthesis (```(``` and ``
 
 * The symptom of the **THIRD** failure-indcuing input. Shown by displaying the output of running ht efile at the command line where it was failing:  
 
+```
+erwin@Erwins-MacBook-Air markdown-parse % java MarkdownParse test-file4.md
+[]
+```
+
 ![Image](ThirdUnexpectedOutcome.png) 
 
 * After making a change to the Markdown File, here is the Expected Outcome"
 
-```Hello```
+```
+erwin@Erwins-MacBook-Air markdown-parse % java MarkdownParse test-file4.md
+[ThirdError.com]
+```
 
 ![Image](ThirdExpectedOutcome.png)  
 
 
 * Relationship:  
+
+The bug was that I did not put the link in the correct location, inside of the parenthesis ```()``` and this did not result in a failure-inducing input because the program didn't know what to state since there were no links in between the parenthesis. This then resulted in a symptom where the program had an output with brackets ```[]``` but had no link in between them. To "fix" this outcome, I just had to put the link in betweent the parenthesis. 
 
 
