@@ -17,5 +17,13 @@ Regrade Request Due Date: January 28, 2022
 
 ***Week 3 Lab Report***
 Due Date: January 28, 2022
+Regrade Request Due Date: February 11, 2022
 
 [Lab Report 2](LabReport2.md)
+
+
+***Week 6 Lab Report***
+Due Date: February 11, 2022
+Regrade Request Due Date: TBH
+
+[Lab Report 3](lab-report-3-week-6)
