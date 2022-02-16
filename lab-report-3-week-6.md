@@ -106,6 +106,21 @@ I ```ssh``` into ```ieng6``` because that is the alias that I chose.
 
 ### Show an ```scp``` command copying a file to your account using just the alias you chose.  
 
+Background Information:
+
+What should we learn how to use the ```scp``` command?
+
+When working remotely, you may have to copy files from one computer to another, from the computer at your home to the computer at your place of work. One way to copy files is to use the ```scp``` command! 
+
+We will always run this command on the client computer, the one that is not logged into the server, in my case, the ieng6 server. 
+
+After using the ```scp``` command, you can use the ```ls``` command to ensure that you have successfuly copied the file and now can be seen in your home directory. 
+
+
+Now that you have some knowledge about what ```scp``` does, I will now demonstrate using the command below: 
+
+---
+
 Open a new terminal and enter the following command:
 
 ```cd .ssh```
@@ -129,3 +144,6 @@ Lastly, check to see if you successfuly copied a file into your account by using
 ```ls```
 
 ![Image](scp2Image.png)
+
+
+You have successfully used the ```scp``` command! 
