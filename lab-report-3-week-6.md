@@ -25,6 +25,12 @@ That will be discussed below!
 
 ### Show your ```.ssh/config``` file, and how you edited it (with VSCode, another program, ect). 
 
+Background Information: When logging into a server, it requires a username and password. Sometimes those usersnames and passwords can be quite long and can take some time to type into the terminal. To improve your worflow, there is a way to create an alias that will take place of writing your username. 
+
+To do that, you could do the following by reading through this tutorial below:
+
+---
+
 In order to access the ```.ssh/config```, you will have to open a new terminal and type in the following command: 
 
 ```
@@ -88,6 +94,10 @@ Host ieng6
 ```
 
 ### Show the ```ssh``` command logging you into your account using just the alias you chose.
+
+Background Information: To show that you have successfully created the alias and entered the correct code inside of the ```.ssh/config``` you can follow the steps type below: 
+
+---
 
 After you setup the ```.ssh/config``` file, you can exit the terminal by following the last few steps in the section above. Afterwards, you can type the following command: 
 
