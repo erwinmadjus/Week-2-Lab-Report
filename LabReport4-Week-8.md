@@ -18,7 +18,7 @@ Link to the ```Markdown-Parse``` repository that I reviewed in Week 7:
 
 This lab will involve working with the following 3 markdown snippets: 
 
-1. 
+
 ```
 `[a link`](url.com)
 
@@ -29,7 +29,7 @@ This lab will involve working with the following 3 markdown snippets:
 [`code]`](ucsd.edu)
 ```
 
-2. 
+ 
 ```
 [a [nested link](a.com)](b.com)
 
@@ -39,7 +39,7 @@ This lab will involve working with the following 3 markdown snippets:
 
 ```
 
-3. 
+ 
 ```
 [this title text is really long and takes up more than 
 one line
@@ -71,9 +71,9 @@ And then there's more text
 
 If you’re using a direct clone to ```ieng6```, you might find it useful to give an extra argument to ```git clone``` that specifies which directory to clone into, for example:
 
+
 ```
 $ git clone https://github.com/ucsd-cse15l-w22/markdown-parse markdown-parse-target-directory
-
 ```
 
 --- 
