@@ -20,13 +20,74 @@ Link to the ```Markdown-Parse``` repository that I reviewed in Week 7:
 
 ##### **Expected Outputs for Both my ```actual-markdown-parse``` repository and the ```markdown-parse``` repository that I reviewed:**
 
+Expected Outputs for all the Snippets are shown below:
 
 ![ExpectedOutputsImage](ExpectedOutputsLab4.png)
 
 
+---
 
+## Code of the tests that are in the ```MarkdownParseTest.java``` of my ```actual-markdown-parse``` repository; 
+
+![ActualTestCodeImage](ActualTestCode.png)
+
+
+---
+
+## Code of the tests that are in the ```MarkdownParseTest.java``` of the ```markdown-parse``` repository that I reviewed; 
+
+
+![ReviewedTestCodeImage](ReviewedTestCode.png)
+
+---
+### **For your implementation, the corresponding output when running the tests; if it passed, say so. If it didn’t pass, show the specific part of the JUnit output that shows the test failure.**
+
+# Answer:
+
+Snippet 1: Yes, this test passed. 
+
+Snippet 2: No, this test did not pass. 
+
+![ActualS2](ActualS2Fail.png)
+
+Snippet 3: No, this test did not pass. 
+
+![ActualS3](ActualS3Fail.png)
+
+---
+
+
+### **For the implementation you reviewed in Week 7, the corresponding output when running the tests; if it passed, say so. If it didn’t pass, show the specific part of the JUnit output that shows the test failure.**
+
+# Answer:
+
+Snippet 1: No, this test did not pass. 
+
+![ReS1](ReS1Fail.png)
+
+Snippet 2: No, this test did not pass. 
+
+![ReS2](ReS2Fail.png)
+
+Snippet 3: No, this test did not pass. 
+
+![ReS3](ReS3Fail.png)
 
 --- 
+
+---
+
+#### **Questions:**
+
+1. Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.
+
+2. Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
+
+3. Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change. 
+
+---
+
+
 ### **Background Information:** 
 
 This lab will involve working with the following 3 markdown snippets: 
@@ -90,11 +151,3 @@ $ git clone https://github.com/ucsd-cse15l-w22/markdown-parse markdown-parse-tar
 ```
 
 --- 
-
-#### **Questions:**
-
-1. Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.
-
-2. Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
-
-3. Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change. 
