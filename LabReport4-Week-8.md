@@ -121,6 +121,9 @@ static int findCloseParen(String markdown, int openParen) {
 
 3. Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change. 
 
+**No, there is not small code change that will make the program work for Snippet 3 because looking at the output the code changes that I already have fixes the first half of the snippet, but as that code is ran, it seems to not be able to run through again to fix the same issues found at the end of the snippet. I created a code change that fixes words in between the closed bracket and the first open parenthesis but that does not loop in the case where there are more words found in the links at the end. I would need to code a method that stops the program from collecting the characters that are not a part of the actual link that needs to be displayed, I also need to create a loop that prevents the characters in the brackets to be displayed in the latter part of the snippet, and lastly I need to create a code change that stops the program from outputting all the spaces that are in place before the last close parenthesis.**
+
+
 ---
 
 
