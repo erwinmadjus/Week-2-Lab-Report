@@ -46,6 +46,8 @@ Expected Outputs for all the Snippets are shown below:
 
 Snippet 1: Yes, this test passed. 
 
+![CorrectS1](correctS1.png)
+
 Snippet 2: No, this test did not pass. 
 
 ![ActualS2](ActualS2Fail.png)
