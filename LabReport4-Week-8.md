@@ -95,6 +95,30 @@ if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '`'){
 
 2. Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
 
+**No, there is not a small code change that I can make to make the program work for Snippet 2 because I would have to create an entirely new method that involves finding all of the open parenthesis in the code before finding all of the close parenthesis that correspond with each open parenthesis. First I would create a new variable like ```int openParenCount```, I would have to create a code called ```findCloseParen``` that first has to find the first parenthesis in the markdown file, and in the while loop for this code I would have to loop through all the characters of the actual link before the next open parenthesis is found. This could be done in the following way:**
+
+
+```
+static int findCloseParen(String markdown, int openParen) {
+    int closeParen = openParen + 1;
+    int openParenCount = 1;
+    while (openParenCount > 0 && closeParen < markdown.length()) {
+        if (markdown.charAt(closeParen) == "(") {
+            openParenCount++;
+        } else if (markdown.charAt(closeParen) == ")" {
+            openParenCount--;
+        }
+        closeParen++;
+    }
+    if (openParenCount == 0) { return closeParen - 1; }
+    else {return - 1; }
+}
+
+```
+
+**This alone does not fix the program when it runs, you have to debug the program using JDB and that leads to more errors that you have to fix and create a code that fixes the issue of nested parenthesis inside the link.**
+
+
 3. Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change. 
 
 ---
