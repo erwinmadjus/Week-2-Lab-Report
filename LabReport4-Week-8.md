@@ -5,7 +5,7 @@
 *Last Edited: February 25, 2022*
 ---
 
-Link to my ```Markdown-Parse``` Repository:
+Link to my ```actual-markdown-parse``` Repository:
 
 [My Repository](https://github.com/erwinmadjus/actual-markdown-parse)
 
@@ -14,6 +14,19 @@ Link to the ```Markdown-Parse``` repository that I reviewed in Week 7:
 [Repository That I Reviewed](https://github.com/yih365/markdown-parse/blob/main/MarkdownParse.java)
 
 ---
+
+### For each test, decide on what it should produce by using either VSCode preview or the CommonMark demo site: 
+
+
+##### **Expected Outputs for Both my ```actual-markdown-parse``` repository and the ```markdown-parse``` repository that I reviewed:**
+
+
+![ExpectedOutputsImage](ExpectedOutputsLab4.png)
+
+
+
+
+--- 
 ### **Background Information:** 
 
 This lab will involve working with the following 3 markdown snippets: 
