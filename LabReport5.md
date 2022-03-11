@@ -153,19 +153,52 @@ if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){
 
 ### ***Test #2:***
 
+**Question:** Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
+
+
+**Answer:** My implementation is correct because in my case, I have made it so if the link has an ```!``` before the first bracket, the link is not an actual link, for example, the image links are not links. 
+
+In my case, the expected output is the output that was displayed using my implementation: ```[]```. 
+
+
+The Code Difference was found on TestFile580.md
+
+What is in the ```580.md``` file: ```![](/url)```
+
 Output:
 
 ```
-
+1073c1070
+< []
+---
+> [/url]
 ```
 
-Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
 
+**Question:** For the implementation that’s not correct (or choose one if both are incorrect), describe the _bug (the problem in the code). You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed.
 
-For the implementation that’s not correct (or choose one if both are incorrect), describe the _bug (the problem in the code). You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed.
+**Answer:** The professor's implementation is incorrect because of the following:
 
+- The ```MarkdownParse.java``` file does not have a condition that checks to see if the program should consider an image link to be a valid link or not, in my case, the image link should not be considered a link. 
 
+- In addtion, what the actual link is in not in the format of an actual link, it is ```/url``` which is not an actual url like ```something.com``` or ```school.edu``` etc. 
 
+To fix the problem of deciding that the program should not consider an image link to be an actual link, you should do the following:
+
+- add an ```if``` statement with the following conditions: one that checks to see if ```nextOpenBracket != 0```; one that checks to see if ```markdown.charAt(nextOpenBracket -1)== -'!')``` then inside the curly brackets add the following: ```currentIndex = nextOpenBracket+1; continue```
+
+Add the following condition in the ```MarkdownParse.java``` file: 
+
+```
+if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){   
+   currentIndex = nextOpenBracket+1;  
+   continue; 
+}
+```
+
+- To fix the problem that the link inside of the parenthesis is considered a link when it is not the correct format, you should add a condition to check to see if string inside of the parenthesis contains any of the endings of a website or link: ```.com```, ```.gov```, ```.edu```, ```.org```, ```.net```, and etc. 
+
+By fixing these 2 problems, you should get the expected output of ```[]```. 
 
 
 All Code Differences:
