@@ -110,14 +110,16 @@ What is in the ```test-files/577.md``` file: ```![foo](train.jpg)```
 
 If the programmer chooses to make an image link not an actual link, then my implementation is correct. 
 
-![1MDFileMine](Test1MDFile.png)
-![1MDFileProf](Test1MDFilePOutput.png)
+**My implementation is correct because it checks to see if the link is an image link or not, since its an image, it does not consider it an actual, hence why it is not displayed.** 
 
 ## ***Both Actual Outputs:***
 
 ![test1](t1output.png)
 
 - Where line ```1065``` is in the ```actual-markdown-parse``` while line ```1062``` is in the ```markdown-parse```
+
+
+## ***In my case, the expected output is the output that was displayed using my implementation: ```[]```.*** 
 
 ```
 1065c1062
@@ -126,8 +128,10 @@ If the programmer chooses to make an image link not an actual link, then my impl
 > [train.jpg]
 
 ```
+![1MDFileMine](Test1MDFile.png)
+![1MDFileProf](Test1MDFilePOutput.png)
 
-## ***In my case, the expected output is the output that was displayed using my implementation: ```[]```.*** 
+
 
 If the programmer chooses to make an image link an actual link, then the professor's implementation is correct. 
 
