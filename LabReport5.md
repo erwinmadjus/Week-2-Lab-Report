@@ -80,8 +80,8 @@ In my case, I ran the following command on the terminal:
 
 You can see the command and the output in the screenshot right below:
 
-[diff1](runningdiff.png)
-[diff2](runningdiff2.png)
+![diff1](runningdiff.png)
+![diff2](runningdiff2.png)
 
 
 ```diff student-mdparse/results.txt markdown-parse/results.txt```
