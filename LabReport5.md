@@ -71,12 +71,21 @@ After waiting for that command to fully run, you then type either one of these c
 where the paths and filenames are the ones that are unique to your repository and the professor's repository. 
 
 
-
-
-
 ---
 
 ### ***Test #1:***
+
+The Code Difference was found on TestFile577.md
+
+Output: 
+
+```
+1065c1062
+< []
+---
+> [train.jpg]
+
+```
 
 Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
 
@@ -86,7 +95,134 @@ For the implementation that’s not correct (or choose one if both are incorrect
 
 ### ***Test #2:***
 
+Output:
+
+```
+536,538c535
+< []
+< []
+< []
+---
+> [/url]
+
+```
+
 Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
 
 
 For the implementation that’s not correct (or choose one if both are incorrect), describe the _bug (the problem in the code). You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed.
+
+
+
+
+
+All Code Differences:
+
+Outputs on the terminal:
+
+```
+230c230
+< []
+---
+> [baz]
+270c270
+< [/bar\* "ti\*tle"]
+---
+> []
+492c492
+< [/f&ouml;&ouml; "f&ouml;&ouml;"]
+---
+> []
+692c692
+< [url &quot;tit&quot;]
+---
+> []
+850c850
+< [/uri "title"]
+---
+> []
+862c862
+< [/my uri]
+---
+> []
+864c864
+< [</my uri>]
+---
+> []
+866,867c866
+< [foo
+< bar]
+---
+> []
+871,872c870
+< [<foo
+< bar>]
+---
+> []
+880c878
+< [\(foo\]
+---
+> [\(foo\)]
+882c880
+< [foo(and(bar]
+---
+> [foo(and(bar))]
+884c882
+< [foo(and(bar]
+---
+> []
+886c884
+< [foo\(and\(bar\]
+---
+> []
+888c886
+< [<foo(and(bar]
+---
+> []
+904c902
+< [/url "title", /url 'title', /url (title]
+---
+> []
+906c904
+< [/url "title \"&quot;"]
+---
+> []
+910c908
+< [/url "title "and" title"]
+---
+> []
+912c910
+< [/url 'title "and" title']
+---
+> []
+914,915c912
+< [   /uri
+<   "title"  ]
+---
+> []
+919c916
+< []
+---
+> [/uri]
+1043c1040
+< [not a link]
+---
+> []
+1057c1054
+< []
+---
+> [/url]
+1065c1062
+< []
+---
+> [train.jpg]
+1069c1066
+< []
+---
+> [<url>]
+1073c1070
+< []
+---
+> [/url]
+
+```
