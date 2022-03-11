@@ -75,9 +75,14 @@ where the paths and filenames are the ones that are unique to your repository an
 
 ### ***Test #1:***
 
+**Question:** Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
+
+
+**Answer:** To determine which implementation is correct in this case depends entirely on the fact if the programmer decides to make an image link an actual link or not. 
+
 The Code Difference was found on TestFile577.md
 
-Output: 
+If the programmer chooses to make an image link not an actual link, then my implementation is correct. 
 
 ```
 1065c1062
@@ -87,10 +92,63 @@ Output:
 
 ```
 
-Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
+In my case, the expected output is the output that was displayed using my implementation: ```[]```. 
+
+If the programmer chooses to make an image link an actual link, then the professor's implementation is correct. 
+
+```
+1065c1062
+< []
+---
+> [train.jpg]
+
+```
+
+In this case, the expected output is ```[train.jpg]``` because the implementation made it so that the program will allow image links to be actual links. 
 
 
-For the implementation that’s not correct (or choose one if both are incorrect), describe the _bug (the problem in the code). You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed.
+
+**Question:** For the implementation that’s not correct (or choose one if both are incorrect), describe the _bug (the problem in the code). You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed.
+
+**Answer:** In order to fix the problem, it can go both ways, depending if you decide to make an image link an acutal link or not. 
+
+If you decide to make an image link not an actual link you would have to do the following:  
+
+The professor's implementation is incorrect. 
+
+- Open up the ```MarkdownParse.java``` file and make sure to add lines of code that checks for the following. 
+
+- add an ```if``` statement with the following conditions: one that checks to see if ```nextOpenBracket != 0```; one that checks to see if ```markdown.charAt(nextOpenBracket -1)== -'!')``` then inside the curly brackets add the following: ```currentIndex = nextOpenBracket+1; continue```
+
+Something like the following:
+
+```
+if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){   
+   currentIndex = nextOpenBracket+1;  
+   continue; 
+}
+```
+
+- Adding the following will cause the program to change the currentIndex to the value that contains the first open bracket, skipping this link entirely because it does not meet the conditions of an actual link. It skips over this link because there is an ```!``` the link.  
+
+- Since some images have a format similar to that of a website, we have to make a fix that can prevent adding a link. 
+
+If you decide to make an image link an actual link you would have to do the following:
+
+My implementation is incorrect. 
+
+- To fix it, I would simply have to remove the check that I have created. 
+
+```
+if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){   
+   currentIndex = nextOpenBracket+1;  
+   continue; 
+}
+```
+
+- By removing this condition on my ```MarkdownParse.java``` file, my program would not check to see if there is an ```!``` in the link. 
+
+- That would make it so, both implementations output the same output, the expected output. 
 
 
 ### ***Test #2:***
@@ -98,12 +156,6 @@ For the implementation that’s not correct (or choose one if both are incorrect
 Output:
 
 ```
-536,538c535
-< []
-< []
-< []
----
-> [/url]
 
 ```
 
