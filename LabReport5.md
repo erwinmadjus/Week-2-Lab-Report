@@ -20,9 +20,11 @@ How you found the tests with different results (Did you use ```diff``` on the re
 **Answer:** To find the tests with different results with one being ran on my repository ```actual-markdown-parse``` repository and the other being ran on the ```markdown-parse``` repository (created by the professor), I did the following:
 
 [MyRepository](https://github.com/erwinmadjus/actual-markdown-parse)
+
+
 [ProfessorRepository](https://github.com/ucsd-cse15l-w22/markdown-parse)
 
-1. First, open up the ProfessorRepository on VSCode. The directory ```test-files/``` in the professor's respository had 1000 files and 650 test input ```.md``` files which did not have any names. (Difficult to keep track of the test files.) To fix that we had to fix the code in the ```script.sh```. Add the following: 
+1. First, open up the ProfessorRepository on VSCode. The directory ```test-files/``` in the professor's respository had 1000 files and 650 test input ```.md``` files which did not have any names. (Difficult to keep track of the test files.) To fix that we had to fix the code in the ```script.sh```. Add the following: (Access this by typing the command ```vim script.sh```)
 
 ```
 
@@ -40,6 +42,12 @@ Run the command ```bash script.sh``` and you will now see the output with a name
 After waiting for that command to fully run, you then type either one of these commands to see the output: ```vim results.txt``` or ```cat results.txt```
 
 3. After that, you then have to log into ```ieng6```. There you copy the ```script.sh``` and ```test-files/``` into ***your*** ```markdown-parse``` directory. You do that by doing the following: 
+
+In my case you would type the following in the terminal, when logged into ```ieng6```:
+
+![copy](cp-rfiles.png)
+
+Generally, you follow the steps listed below:
 
 ```
 cd ~ # go back to your home directory
@@ -66,6 +74,16 @@ After waiting for that command to fully run, you then type either one of these c
 
 5. While logged into ```ieng6```, you run the following command:
 
+In my case, I ran the following command on the terminal: 
+
+```diff actual-markdown-parse/results.txt lab9/markdown-parse/results.txt```
+
+You can see the command and the output in the screenshot right below:
+
+[diff1](runningdiff.png)
+[diff2](runningdiff2.png)
+
+
 ```diff student-mdparse/results.txt markdown-parse/results.txt```
 
 where the paths and filenames are the ones that are unique to your repository and the professor's repository. 
@@ -73,6 +91,9 @@ where the paths and filenames are the ones that are unique to your repository an
 You should get the following output: (This screenshot only contains the tests that I will be checking later during this lab, not the entire ouput). 
 
 ![diffOutput](UsingDIFF.png)
+
+
+- To read this, you first see a line ```like 92c92```, where the ```results.txt``` in the ```student-mdparse``` directory, the line contained ```[]```, while on line ```92``` of the ```markdown-parse/results.txt``` directory, the line contained ```[/foo]```. If we look at line ```92```, in those files, that’s the test output for the ```file 14.md```
 
 ---
 
@@ -83,14 +104,20 @@ You should get the following output: (This screenshot only contains the tests th
 
 **Answer:** To determine which implementation is correct in this case depends entirely on the fact if the programmer decides to make an image link an actual link or not. 
 
-The Code Difference was found on TestFile577.md
+The Code Difference was found on the ```test-files/577.md```
 
-What is in the ```577.md``` file: ```![foo](train.jpg)```
+What is in the ```test-files/577.md``` file: ```![foo](train.jpg)```
 
 If the programmer chooses to make an image link not an actual link, then my implementation is correct. 
 
 ![1MDFileMine](Test1MDFile.png)
 ![1MDFileProf](Test1MDFilePOutput.png)
+
+## ***Both Actual Outputs:***
+
+![test1](t1output.png)
+
+- Where line ```1065``` is in the ```actual-markdown-parse``` while line ```1062``` is in the ```markdown-parse```
 
 ```
 1065c1062
@@ -100,7 +127,7 @@ If the programmer chooses to make an image link not an actual link, then my impl
 
 ```
 
-In my case, the expected output is the output that was displayed using my implementation: ```[]```. 
+## ***In my case, the expected output is the output that was displayed using my implementation: ```[]```.*** 
 
 If the programmer chooses to make an image link an actual link, then the professor's implementation is correct. 
 
@@ -112,13 +139,13 @@ If the programmer chooses to make an image link an actual link, then the profess
 
 ```
 
-In this case, the expected output is ```[train.jpg]``` because the implementation made it so that the program will allow image links to be actual links. 
+## ***In this case, the expected output is ```[train.jpg]``` because the implementation made it so that the program will allow image links to be actual links.*** 
 
 
 
 **Question:** For the implementation that’s not correct (or choose one if both are incorrect), describe the _bug (the problem in the code). You don’t have to provide a fix, but you should be specific about what is wrong with the program, and show the code that should be fixed.
 
-**Answer:** In order to fix the problem, it can go both ways, depending if you decide to make an image link an acutal link or not. 
+## **Answer:** In order to fix the problem, it can go both ways, depending if you decide to make an image link an acutal link or not. 
 
 If you decide to make an image link not an actual link you would have to do the following:  
 
@@ -163,15 +190,21 @@ if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){
 
 **Question:** Describe which implementation is correct, or if you think neither is correct, by showing both actual outputs and indicating what the expected output is.
 
+![test2](t2output.png)
 
-**Answer:** My implementation is correct because in my case, I have made it so if the link has an ```!``` before the first bracket, the link is not an actual link, for example, the image links are not links. 
+- Where line ```1073``` is in the ```actual-markdown-parse``` while line ```1070``` is in the ```markdown-parse```
 
-In my case, the expected output is the output that was displayed using my implementation: ```[]```. 
+## ***The expected output would be ```[]```***
 
 
-The Code Difference was found on TestFile580.md
+**Answer:** My implementation is correct because in my case, the link inside of the parenthesis is not the correct form of an actual link, it does not end with a common ending like ```.edu``` or ```.com```. My implementation also catches that there is an ```!``` before the first bracket, the link is also not an actual link in this case. 
 
-What is in the ```580.md``` file: ```![](/url)```
+## ***The expected output is the output that was displayed using my implementation: ```[]```.*** 
+
+
+The Code Difference was found on the ```test-files/580.md```
+
+What is in the ```test-files/580.md``` file: ```![](/url)```
 
 
 ![2MDFileMine](Test2MDFile.png)
@@ -191,9 +224,11 @@ Output:
 
 **Answer:** The professor's implementation is incorrect because of the following:
 
-- The ```MarkdownParse.java``` file does not have a condition that checks to see if the program should consider an image link to be a valid link or not, in my case, the image link should not be considered a link. 
+- The ```MarkdownParse.java``` file and the professor's implementation does not have a condition that checks the actual link is in not in the format of an actual link, it is ```/url``` which is not an actual url like ```something.com``` or ```school.edu``` etc. 
 
-- In addtion, what the actual link is in not in the format of an actual link, it is ```/url``` which is not an actual url like ```something.com``` or ```school.edu``` etc. 
+- To fix the problem that the link inside of the parenthesis is considered a link when it is not the correct format, you should add a condition to check to see if string inside of the parenthesis contains any of the endings of a website or link: ```.com```, ```.gov```, ```.edu```, ```.org```, ```.net```, and etc. 
+
+- In addition, the implementation does not check to see if the program should consider an image link to be a valid link or not, in my case, the image link should not be considered a link. 
 
 To fix the problem of deciding that the program should not consider an image link to be an actual link, you should do the following:
 
@@ -207,11 +242,7 @@ if (nextOpenBracket != 0 && markdown.charAt(nextOpenBracket -1) == '!'){
    continue; 
 }
 ```
-
-- To fix the problem that the link inside of the parenthesis is considered a link when it is not the correct format, you should add a condition to check to see if string inside of the parenthesis contains any of the endings of a website or link: ```.com```, ```.gov```, ```.edu```, ```.org```, ```.net```, and etc. 
-
-By fixing these 2 problems, you should get the expected output of ```[]```. 
-
+## By fixing these 2 problems, you should get the expected output of ```[]```. 
 
 All Code Differences:
 
