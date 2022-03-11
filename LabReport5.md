@@ -70,6 +70,9 @@ After waiting for that command to fully run, you then type either one of these c
 
 where the paths and filenames are the ones that are unique to your repository and the professor's repository. 
 
+You should get the following output: (This screenshot only contains the tests that I will be checking later during this lab, not the entire ouput). 
+
+![diffOutput](UsingDIFF.png)
 
 ---
 
@@ -82,7 +85,12 @@ where the paths and filenames are the ones that are unique to your repository an
 
 The Code Difference was found on TestFile577.md
 
+What is in the ```577.md``` file: ```![foo](train.jpg)```
+
 If the programmer chooses to make an image link not an actual link, then my implementation is correct. 
+
+![1MDFileMine](Test1MDFile.png)
+![1MDFileProf](Test1MDFilePOutput.png)
 
 ```
 1065c1062
@@ -164,6 +172,10 @@ In my case, the expected output is the output that was displayed using my implem
 The Code Difference was found on TestFile580.md
 
 What is in the ```580.md``` file: ```![](/url)```
+
+
+![2MDFileMine](Test2MDFile.png)
+![2MDFileProf](Test2MDFilePOutput.png)
 
 Output:
 
