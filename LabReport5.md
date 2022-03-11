@@ -57,12 +57,22 @@ cp cse15l-markdown-parse/script.sh your-markdown-parse/
 
 ```
 
+Afterwards, you run the following command: ```bash script.sh > results.txt```
+
+After waiting for that command to fully run, you then type either one of these commands to see the output: ```vim results.txt``` or ```cat results.txt```
+
+
+4. After you have the 2 ```.txt``` files created with one having the output of the professor's program and the other with the output from your program, you can use the program ```diff```.
+
+5. While logged into ```ieng6```, you run the following command:
+
+```diff student-mdparse/results.txt markdown-parse/results.txt```
+
+where the paths and filenames are the ones that are unique to your repository and the professor's repository. 
 
 
 
 
-
-Since there was a directory in the professor's repository called ```test-files/```, with 1000 files and 650 are test input ```.md``` files.  
 
 ---
 
