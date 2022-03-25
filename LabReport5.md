@@ -1,4 +1,4 @@
-# **Week 10 Lab Report #5** 
+# **Debugging, Using Diff, and Using Bash (Week 10 Lab Report #5)** 
 
 *Created by: Erwin Madjus*
 

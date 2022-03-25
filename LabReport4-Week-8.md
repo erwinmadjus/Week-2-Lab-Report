@@ -1,4 +1,4 @@
-# **Week 8 Lab Report #4** 
+# **Comparing Code and Debugging  (Week 8 Lab Report)** 
 
 *Created by: Erwin Madjus*
 
