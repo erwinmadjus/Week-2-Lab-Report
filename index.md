@@ -60,3 +60,9 @@ Due Date March 11, 2022
 [Lab Report 5](LabReport5.md)
 
 
+
+***Java Notes (Written by Erwin Madjus)***
+
+
+
+[Java Notes](JavaNotes.md)
